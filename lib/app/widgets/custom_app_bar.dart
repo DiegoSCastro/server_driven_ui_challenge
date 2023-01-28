@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:sdui/sdui.dart';
+import 'package:server_driven_ui_challenge/app/core/ui/styles/app_assets.dart';
+import 'package:server_driven_ui_challenge/app/core/ui/styles/app_colors.dart';
+import 'package:server_driven_ui_challenge/app/core/ui/styles/app_text_styles.dart';
 
-import '../core/ui/custom_clip/clip_oval_app_bar_bottom.dart';
+import '../core/ui/clip/clip_oval_app_bar_bottom.dart';
 
 class CustomAppBar extends SDUIWidget {
   double? height;
@@ -24,6 +28,7 @@ class CustomAppBar extends SDUIWidget {
     return this;
   }
 
+  bool visible = true;
   @override
   Widget toWidget(BuildContext context) {
     return ClipPath(
@@ -48,13 +53,51 @@ class CustomAppBar extends SDUIWidget {
         height: height,
         width: double.infinity,
         child: Column(
-          children: const [
-            Text(
-              'Saldo Disponível',
+          children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(
+                  'Saldo Disponível',
+                  style: context.appTextStyles.headlineLarge.copyWith(
+                    color: context.appColors.white,
+                  ),
+                ),
+                const EyeIcon()
+              ],
             ),
+            const SizedBox(height: 24),
+            Row()
           ],
         ),
       ),
+    );
+  }
+}
+
+class EyeIcon extends StatefulWidget {
+  const EyeIcon({super.key});
+
+  @override
+  State<EyeIcon> createState() => _EyeIconState();
+}
+
+class _EyeIconState extends State<EyeIcon> {
+  bool visible = false;
+  @override
+  Widget build(BuildContext context) {
+    return InkWell(
+      onTap: () {
+        setState(() {
+          visible = !visible;
+        });
+      },
+      child: visible
+          ? SvgPicture.asset(context.appAssets.iconClosedEye)
+          : Icon(
+              Icons.visibility,
+              color: context.appColors.white,
+            ),
     );
   }
 }
