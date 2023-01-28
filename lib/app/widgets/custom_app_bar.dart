@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:sdui/sdui.dart';
 
-import '../core/ui/custom_clip/ClipOvalAppBarBottom.dart';
+import '../core/ui/custom_clip/clip_oval_app_bar_bottom.dart';
 
 class CustomAppBar extends SDUIWidget {
   double? height;
@@ -48,7 +48,7 @@ class CustomAppBar extends SDUIWidget {
         height: height,
         width: double.infinity,
         child: Column(
-          children: [
+          children: const [
             Text(
               'Saldo Disponível',
             ),
