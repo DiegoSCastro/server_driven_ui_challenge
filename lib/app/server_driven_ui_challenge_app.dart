@@ -5,14 +5,19 @@ class ServerDrivenUiChallengeApp extends StatefulWidget {
   const ServerDrivenUiChallengeApp({super.key});
 
   @override
-  State<ServerDrivenUiChallengeApp> createState() => _ServerDrivenUiChallengeAppState();
+  State<ServerDrivenUiChallengeApp> createState() =>
+      _ServerDrivenUiChallengeAppState();
 }
 
-class _ServerDrivenUiChallengeAppState extends State<ServerDrivenUiChallengeApp> {
+class _ServerDrivenUiChallengeAppState
+    extends State<ServerDrivenUiChallengeApp> {
   Map<String, WidgetBuilder> _routes() => {
-        '/': (context) => DynamicRoute(provider: StaticRouteContentProvider(homeJson)),
-        '/static': (context) => DynamicRoute(provider: StaticRouteContentProvider(staticJson)),
-        '/chat': (context) => DynamicRoute(provider: StaticRouteContentProvider(chatJson)),
+        '/': (context) =>
+            DynamicRoute(provider: StaticRouteContentProvider(homeJson)),
+        '/static': (context) =>
+            DynamicRoute(provider: StaticRouteContentProvider(staticJson)),
+        '/chat': (context) =>
+            DynamicRoute(provider: StaticRouteContentProvider(chatJson)),
         '/remote': (context) => const DynamicRoute(
             provider: HttpRouteContentProvider(
                 'http://10.0.2.2:8080' /* Remove endpoint - Replace it with your own */
@@ -36,16 +41,63 @@ class _ServerDrivenUiChallengeAppState extends State<ServerDrivenUiChallengeApp>
 var homeJson = '''
 {
   "type": "Screen",  
+  "backgroundColor": "#FFFFFF",
   "child": {
-    "type": "CustomAppBar",
+    "type" : "Column",
+    "children": [
+    {
+       "type": "CustomAppBar",
+       "attributes": {
+       "topPadding": 80.0,
+       "horizontalPadding": 16.0,
+       "height": 234.0,
+       "gradientTopColor": "#D33091",
+       "gradientBottomColor": "#FF5CBD",
+       "box1Label": "Saldo na conta",
+       "box2Label": "Saldo nas caixinhas",
+       "box1Value": "450,00",
+       "box2Value": "1500,00",
+       "showBox1": true,
+       "showBox2": true
+      }  
+    },
+    {
+    "type": "PaymentSection",
     "attributes": {
-    "topPadding": 50.0,
+    "title" : "Pagar",
     "horizontalPadding": 16.0,
-    "height": 234.0,
-    "gradientTopColor": "#D33091",
-    "gradientBottomColor": "#FF5CBD"
-    }  
+    "verticalPadding": 20.0,
+    "mainLabel": "USAR CHAVE PIX",
+    "mainLabelColor": "#D33091",
+    "mainDescription": "CPF/CNPJ, e-mail, telefone ou outra chave",
+    "mainIcon": "key",
+    "mainIconColor": "#D33091",
+    "": ""
+    
+       }
+    },
+    {
+    "type": "PaymentSection",
+    "attributes": {
+    "title" : "Receber"
+    
+       }
+    },
+    
+    {
+        "type": "Input",
+        "attributes": {
+          "id": "first_name",
+          "name": "first_name",
+          "value": "Ray",
+          "caption": "First Name",
+          "maxLength": 30,
+          "minLength": 5
+        }
+      }
+    ]
   }
+  
   
 }
 ''';

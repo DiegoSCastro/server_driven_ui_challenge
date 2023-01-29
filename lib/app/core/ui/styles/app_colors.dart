@@ -10,6 +10,7 @@ class AppColors {
   }
 
   Color get white => const Color(0xFFFFFFFF);
+  Color get shadow => const Color.fromRGBO(0, 0, 0, 0.1);
 }
 
 extension AppColorsExtensions on BuildContext {
