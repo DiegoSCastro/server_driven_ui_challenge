@@ -1,12 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:sdui/sdui.dart';
-import 'package:server_driven_ui_challenge/app/core/ui/styles/app_assets.dart';
-import 'package:server_driven_ui_challenge/app/core/ui/styles/app_colors.dart';
-import 'package:server_driven_ui_challenge/app/core/ui/styles/app_text_styles.dart';
-import 'package:server_driven_ui_challenge/app/widgets/custom_app_bar/components/balance_visible.dart';
 
 import '../../core/ui/clip/clip_oval_app_bar_bottom.dart';
+import '../../core/ui/styles/app_styles.dart';
+import 'components/balance_visible.dart';
 
 class CustomAppBar extends SDUIWidget {
   double? height;

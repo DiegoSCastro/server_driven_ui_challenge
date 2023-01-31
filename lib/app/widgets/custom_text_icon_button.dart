@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:sdui/sdui.dart';
-import 'package:server_driven_ui_challenge/app/core/ui/styles/app_colors.dart';
-import 'package:server_driven_ui_challenge/app/core/ui/styles/app_shadows.dart';
-import 'package:server_driven_ui_challenge/app/core/ui/styles/app_text_styles.dart';
+
+import '../core/ui/styles/app_styles.dart';
 
 class CustomTextIconButton extends SDUIWidget {
   String label = '';

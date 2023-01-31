@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sdui/sdui.dart';
+import 'package:server_driven_ui_challenge/app/core/ui/theme/theme_config.dart';
 
 class ServerDrivenUiChallengeApp extends StatefulWidget {
   const ServerDrivenUiChallengeApp({super.key});
@@ -24,9 +25,7 @@ class _ServerDrivenUiChallengeAppState extends State<ServerDrivenUiChallengeApp>
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Server Driven Ui',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
+      theme: ThemeConfig.theme,
       initialRoute: '/transactionLimitJson',
       debugShowCheckedModeBanner: false,
       routes: _routes(),
@@ -59,8 +58,7 @@ var transactionLimitJson = '''
         "attributes": {
           "title": "Limites das transações Pix",
           "subtitle": "Vocês pode ajustar os limites de transação Pix durante o dia e no período noturno.",
-          "paddingTop": 40.0
-        
+          "paddingTop": 40.0        
         }
       },
       {

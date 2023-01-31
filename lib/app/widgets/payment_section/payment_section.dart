@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:sdui/sdui.dart';
-import 'package:server_driven_ui_challenge/app/core/ui/styles/app_text_styles.dart';
-import 'package:server_driven_ui_challenge/app/widgets/payment_section/components/main_section_buttom.dart';
+
+import '../../core/ui/styles/app_styles.dart';
+import 'components/main_section_buttom.dart';
 
 class PaymentSection extends SDUIWidget {
   String title = '';

@@ -1,8 +1,7 @@
 import 'package:flutter/cupertino.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:sdui/sdui.dart';
-import 'package:server_driven_ui_challenge/app/core/ui/styles/app_colors.dart';
-import 'package:server_driven_ui_challenge/app/core/ui/styles/app_text_styles.dart';
+
+import '../core/ui/styles/app_styles.dart';
 
 class TransactionLimitTitle extends SDUIWidget {
   String title = '';
