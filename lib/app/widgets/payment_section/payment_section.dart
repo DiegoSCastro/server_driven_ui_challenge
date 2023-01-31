@@ -11,6 +11,7 @@ class PaymentSection extends SDUIWidget {
   String mainDescription = '';
   String mainIcon = '';
   String mainIconColor = '';
+  String mainLabelColor = '';
 
   @override
   SDUIWidget fromJson(Map<String, dynamic>? json) {
@@ -21,6 +22,8 @@ class PaymentSection extends SDUIWidget {
     mainDescription = json?['mainDescription'] ?? '';
     mainIcon = json?['mainIcon'] ?? '';
     mainIconColor = json?['mainIconColor'] ?? '';
+    mainLabelColor = json?['mainLabelColor'] ?? '';
+
     return this;
   }
 
@@ -44,6 +47,11 @@ class PaymentSection extends SDUIWidget {
             description: mainDescription,
             icon: mainIcon,
             iconColor: toColor(mainIconColor),
+            labelColor: toColor(mainLabelColor),
+          ),
+          const SizedBox(height: 16),
+          Row(
+            children: childrenWidgets(context),
           )
         ],
       ),

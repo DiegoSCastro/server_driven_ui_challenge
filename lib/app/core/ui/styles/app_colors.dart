@@ -11,6 +11,8 @@ class AppColors {
 
   Color get white => const Color(0xFFFFFFFF);
   Color get shadow => const Color.fromRGBO(0, 0, 0, 0.1);
+  Color get darkGray => const Color(0xFF4A4A50);
+  Color get black => const Color(0xFF02020A);
 }
 
 extension AppColorsExtensions on BuildContext {

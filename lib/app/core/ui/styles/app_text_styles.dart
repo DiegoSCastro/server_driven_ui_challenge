@@ -33,8 +33,8 @@ class AppTextStyles {
   TextStyle get bodyMedium => TextStyle(
         fontWeight: FontWeight.normal,
         fontFamily: primaryFont,
-        fontSize: 12,
-        height: 1.66,
+        fontSize: 11,
+        height: 1.27,
       );
   TextStyle get bodyLarge => TextStyle(
         fontWeight: FontWeight.normal,

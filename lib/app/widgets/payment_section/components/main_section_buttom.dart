@@ -9,13 +9,15 @@ class MainSectionButton extends StatelessWidget {
   final String description;
   final String icon;
   final Color? iconColor;
-  const MainSectionButton({
-    Key? key,
-    required this.label,
-    required this.description,
-    required this.icon,
-    this.iconColor,
-  }) : super(key: key);
+  final Color? labelColor;
+  const MainSectionButton(
+      {Key? key,
+      required this.label,
+      required this.description,
+      required this.icon,
+      this.iconColor,
+      this.labelColor})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -33,11 +35,12 @@ class MainSectionButton extends StatelessWidget {
         child: Row(
           children: [
             Padding(
-              padding:
-                  const EdgeInsets.symmetric(vertical: 4.0, horizontal: 8.0),
+              padding: const EdgeInsets.symmetric(vertical: 4.0, horizontal: 8.0),
               child: SvgPicture.asset(
                 'assets/images/$icon.svg',
                 color: iconColor,
+                width: 26,
+                height: 26,
               ),
             ),
             const SizedBox(width: 8),
@@ -46,7 +49,7 @@ class MainSectionButton extends StatelessWidget {
               children: [
                 Text(
                   label,
-                  style: context.appTextStyles.titleSmall,
+                  style: context.appTextStyles.titleSmall.copyWith(color: labelColor),
                 ),
                 const SizedBox(height: 4),
                 Text(
