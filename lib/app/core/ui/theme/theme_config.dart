@@ -20,13 +20,17 @@ class ThemeConfig {
       contentPadding: const EdgeInsets.all(13),
       border: _defaultInputBorder,
       enabledBorder: _defaultInputBorder,
-      focusedBorder: _defaultInputBorder,
+      focusedBorder: _focusedInputBorder,
       labelStyle: AppTextStyles.i.bodyMedium,
     ),
   );
 
   static final _defaultInputBorder = OutlineInputBorder(
-    borderRadius: BorderRadius.circular(18),
+    borderRadius: BorderRadius.circular(6),
     borderSide: BorderSide(color: AppColors.i.gray, width: 1),
+  );
+  static final _focusedInputBorder = OutlineInputBorder(
+    borderRadius: BorderRadius.circular(6),
+    borderSide: BorderSide(color: AppColors.i.primary, width: 1),
   );
 }

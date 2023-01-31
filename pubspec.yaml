@@ -12,6 +12,7 @@ dependencies:
   cupertino_icons: ^1.0.5
   sdui: ^0.1.198
   flutter_svg: ^1.1.6
+  brasil_fields: ^1.9.1
 
 dev_dependencies:
   flutter_test:
