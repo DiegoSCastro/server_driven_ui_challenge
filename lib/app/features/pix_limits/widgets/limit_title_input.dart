@@ -13,6 +13,7 @@ class LimitTitleInput extends SDUIWidget {
   double paddingRight = 16.0;
   double textsSpacing = 24.0;
   bool hasSelectTime = false;
+  String timeSubtitle = '';
 
   @override
   SDUIWidget fromJson(Map<String, dynamic>? json) {
@@ -24,6 +25,7 @@ class LimitTitleInput extends SDUIWidget {
     paddingRight = json?['paddingRight'] ?? 16.0;
     textsSpacing = json?['textsSpacing'] ?? 24.0;
     hasSelectTime = json?['hasSelectTime'] ?? false;
+    timeSubtitle = json?['timeSubtitle'] ?? '';
     return this;
   }
 
@@ -65,7 +67,7 @@ class LimitTitleInput extends SDUIWidget {
           if (hasSelectTime) const SizedBox(height: 20),
           if (hasSelectTime)
             Text(
-              subtitle,
+              timeSubtitle,
               style: context.appTextStyles.titleSmall.copyWith(
                 color: context.appColors.darkGray,
                 fontWeight: FontWeight.w500,

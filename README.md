@@ -1,5 +1,7 @@
 # server_driven_ui_challenge
 
+![rsua3-918hn](https://user-images.githubusercontent.com/66894278/215932035-47a72768-94a3-42c0-98bd-c43c9e26ede1.gif)
+
 test for snapfi company
 
 ## Getting Started

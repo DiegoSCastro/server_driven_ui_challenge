@@ -38,6 +38,7 @@
         "attributes": {
           "title": "Limite do período noturno",
           "subtitle": "Limite máximo de transação noturna",
+          "timeSubtitle": "Horário Noturno",
           "hasSelectTime": true
         }
       },
