@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:sdui/sdui.dart';
 
-import '../../core/ui/styles/app_styles.dart';
+import '../../../../core/ui/styles/app_styles.dart';
 
 class SectionIconButton extends SDUIWidget {
   String label = '';

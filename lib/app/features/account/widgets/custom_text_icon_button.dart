@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:sdui/sdui.dart';
 
-import '../core/ui/styles/app_styles.dart';
+import '../../../core/ui/styles/app_styles.dart';
 
 class CustomTextIconButton extends SDUIWidget {
   String label = '';

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-import '../../../core/ui/styles/app_styles.dart';
+import '../../../../../core/ui/styles/app_styles.dart';
 
 class MainSectionButton extends StatelessWidget {
   final String label;

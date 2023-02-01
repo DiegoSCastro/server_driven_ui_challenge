@@ -1,0 +1,65 @@
+{
+  "type": "Screen",
+
+  "attributes": {
+    "safe": true,
+    "backgroundColor": "#FFFFFF"
+  },
+  "child": {
+    "type": "Column",
+    "attributes":{
+      "crossAxisAlignment": "start"
+    },
+    "children": [
+      {"type": "BackButton"},
+      {
+        "type": "TransactionLimitTitle",
+        "attributes": {
+          "title": "Limites das transações Pix",
+          "subtitle": "Vocês pode ajustar os limites de transação Pix durante o dia e no período noturno.",
+          "paddingTop": 40.0
+        }
+      },
+      {
+        "type": "Spacer"
+      },
+      {
+        "type": "LimitTitleInput",
+        "attributes": {
+          "title": "Limite do período diurno",
+          "subtitle": "Limite máximo de transação diurna"
+        }
+      },
+      {
+        "type": "Spacer"
+      },
+      {
+        "type": "LimitTitleInput",
+        "attributes": {
+          "title": "Limite do período noturno",
+          "subtitle": "Limite máximo de transação noturna",
+          "hasSelectTime": true
+        }
+      },
+      {
+        "type": "Spacer"
+      },
+      {
+        "type": "CustomElevatedButton",
+        "attributes": {
+          "label": "SALVAR",
+          "backgroundColor": "#D33091",
+          "horizontalPadding": 16.0,
+          "hasPop": true,
+          "popMessage": "Limite alterado com sucesso"
+        }
+      },
+      {
+        "type": "Container",
+        "attributes": {
+          "height": 16.0
+        }
+      }
+    ]
+  }
+}

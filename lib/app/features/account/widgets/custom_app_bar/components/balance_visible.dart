@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../core/ui/styles/app_styles.dart';
+import '../../../../../core/ui/styles/app_styles.dart';
 
 class BalanceVisible extends StatelessWidget {
   final String label;

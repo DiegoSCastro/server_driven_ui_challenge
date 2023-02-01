@@ -13,7 +13,7 @@ class BackButton extends SDUIWidget {
     return InkWell(
       onTap: Navigator.of(context).pop,
       child: Container(
-        padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 16),
+        padding: const EdgeInsets.all(20),
         child: SvgPicture.asset(
           'assets/images/arrow_back_ios.svg',
         ),

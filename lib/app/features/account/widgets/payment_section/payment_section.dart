@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:sdui/sdui.dart';
 
-import '../../core/ui/styles/app_styles.dart';
+import '../../../../core/ui/styles/app_styles.dart';
 import 'components/main_section_buttom.dart';
 
 class PaymentSection extends SDUIWidget {

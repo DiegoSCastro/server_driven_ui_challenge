@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:sdui/sdui.dart';
 
-import '../../core/ui/clip/clip_oval_app_bar_bottom.dart';
-import '../../core/ui/styles/app_styles.dart';
+import '../../../../core/ui/clip/clip_oval_app_bar_bottom.dart';
+import '../../../../core/ui/styles/app_styles.dart';
 import 'components/balance_visible.dart';
 
 class CustomAppBar extends SDUIWidget {
