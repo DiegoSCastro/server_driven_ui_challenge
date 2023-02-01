@@ -59,7 +59,7 @@ class LimitTitleInput extends SDUIWidget {
               CentavosInputFormatter(),
             ],
             decoration: const InputDecoration(
-              prefixText: 'R\$',
+              prefixText: 'R\$ ',
             ),
           ),
           if (hasSelectTime) const SizedBox(height: 20),

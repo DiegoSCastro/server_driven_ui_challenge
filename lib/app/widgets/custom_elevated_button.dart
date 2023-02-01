@@ -40,13 +40,33 @@ class CustomElevatedButton extends SDUIWidget {
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(20),
             )),
-        onPressed: () {
+        onPressed: () async {
           onSubmit(context);
+          showDialog<void>(
+            context: context,
+            barrierDismissible: false,
+            builder: (BuildContext context) {
+              return const SimpleDialog(
+                elevation: 0.0,
+                backgroundColor: Colors.transparent, // can change this to your prefered color
+                children: <Widget>[
+                  Center(
+                    child: CircularProgressIndicator(),
+                  )
+                ],
+              );
+            },
+          );
           if (hasPop) {
-            Navigator.of(context).pop();
-            ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-              content: Text(popMessage),
-            ));
+            await Future.delayed(const Duration(seconds: 3)).then((_) {
+              Navigator.of(context).pop();
+              Navigator.of(context).pop();
+              ScaffoldMessenger.of(context).showSnackBar(
+                SnackBar(
+                  content: Text(popMessage),
+                ),
+              );
+            });
           }
         },
         child: Text(
