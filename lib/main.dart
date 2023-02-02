@@ -5,6 +5,7 @@ import 'package:sdui/sdui.dart';
 import 'package:server_driven_ui_challenge/app/core/utils/json_reader.dart';
 import 'package:server_driven_ui_challenge/app/services/firebase/remote_config_impl.dart';
 
+import 'app/core/config/env.dart';
 import 'app/features/account/widgets/custom_app_bar/custom_app_bar.dart';
 import 'app/features/account/widgets/custom_text_icon_button.dart';
 import 'app/features/account/widgets/payment_section/payment_section.dart';
@@ -21,6 +22,7 @@ final getIt = GetIt.instance;
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  await Env.i.load();
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
