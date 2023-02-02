@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "711408744210",
+    "project_id": "server-driven-ui-challenge",
+    "storage_bucket": "server-driven-ui-challenge.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:711408744210:android:76413ee0b5d6a4887325cb",
+        "android_client_info": {
+          "package_name": "com.diegocastro.snapfi.server_driven_ui_challenge"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "711408744210-eeq1tv2al3ba3n14um77eukkc0rgt731.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCcH-Fb8tQzOyuhqBbDPKB4VmXQrN1iP-E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "711408744210-eeq1tv2al3ba3n14um77eukkc0rgt731.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

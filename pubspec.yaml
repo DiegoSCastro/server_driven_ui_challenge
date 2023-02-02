@@ -13,6 +13,10 @@ dependencies:
   sdui: ^0.1.198
   flutter_svg: ^1.1.6
   brasil_fields: ^1.9.1
+  firebase_remote_config: ^3.0.9
+  firebase_analytics: ^10.1.0
+  firebase_core: ^2.4.1
+  get_it: ^7.2.0
 
 dev_dependencies:
   flutter_test:

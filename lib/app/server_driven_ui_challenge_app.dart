@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:sdui/sdui.dart';
 import 'package:server_driven_ui_challenge/app/core/ui/theme/theme_config.dart';
-import 'package:server_driven_ui_challenge/app/core/utils/json_reader.dart';
 
+import '../main.dart';
 import 'features/splash/splash.dart';
+import 'services/firebase/remote_config_repository.dart';
 
 class ServerDrivenUiChallengeApp extends StatefulWidget {
   const ServerDrivenUiChallengeApp({super.key});
@@ -13,13 +14,15 @@ class ServerDrivenUiChallengeApp extends StatefulWidget {
 }
 
 class _ServerDrivenUiChallengeAppState extends State<ServerDrivenUiChallengeApp> {
+  final RemoteConfigRepository remoteConfig = getIt<RemoteConfigRepository>();
+
   Map<String, WidgetBuilder> _routes() => {
         '/': (context) => const Splash(),
         '/home': (context) => DynamicRoute(
-              provider: StaticRouteContentProvider(homeJson),
+              provider: StaticRouteContentProvider(remoteConfig.getString('home')),
             ),
         '/transactionLimitJson': (context) => DynamicRoute(
-              provider: StaticRouteContentProvider(pixLimitJson),
+              provider: StaticRouteContentProvider(remoteConfig.getString('pix_limit')),
             ),
       };
 

@@ -1,18 +1,15 @@
-# server_driven_ui_challenge
+# Server driven ui challenge
 
 ![rsua3-918hn](https://user-images.githubusercontent.com/66894278/215932035-47a72768-94a3-42c0-98bd-c43c9e26ede1.gif)
 
 test for snapfi company
 
-## Getting Started
+## Executando o app
 
-This project is a starting point for a Flutter application.
+Este aplicativo foi criado na versão 3.3.10 do flutter (null safety).
+Para poder roda-lo é necessário ter instalado uma versão superior a 3.0.0 do flutter e 
+superior a 2.18.5 do dart.
 
-A few resources to get you started if this is your first Flutter project:
+## Executando o app em modo de desenvolvimento
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
