@@ -10,15 +10,16 @@ class RemoteConfigImpl implements RemoteConfigRepository {
   RemoteConfigFetchStatus get lastFetchStatus => _sdk.lastFetchStatus;
   DateTime get lastFetchTime => _sdk.lastFetchTime;
 
+  RemoteConfigValue getValue(String key) {
+    return _sdk.getValue(key);
+  }
+
   @override
   Future<void> init() async {
     _sdk = FirebaseRemoteConfig.instance;
+    await fetchAndActivate();
     await setConfigSettings();
     await setDefaults();
-  }
-
-  RemoteConfigValue getValue(String key) {
-    return _sdk.getValue(key);
   }
 
   @override
@@ -31,30 +32,10 @@ class RemoteConfigImpl implements RemoteConfigRepository {
   }
 
   @override
-  bool getBool(String key) {
-    return _sdk.getBool(key);
-  }
-
-  @override
-  double getDouble(String key) {
-    return _sdk.getDouble(key);
-  }
-
-  @override
-  int getInt(String key) {
-    return _sdk.getInt(key);
-  }
-
-  @override
-  String getString(String key) {
-    return _sdk.getString(key);
-  }
-
-  @override
   Future<void> setConfigSettings() async {
     await _sdk.setConfigSettings(
       RemoteConfigSettings(
-        minimumFetchInterval: Duration.zero,
+        minimumFetchInterval: const Duration(seconds: 1),
         fetchTimeout: const Duration(seconds: 12),
       ),
     );
@@ -68,5 +49,25 @@ class RemoteConfigImpl implements RemoteConfigRepository {
     };
     await _sdk.setDefaults(defaults);
     RemoteConfigValue(null, ValueSource.valueStatic);
+  }
+
+  @override
+  String getString(String key) {
+    return _sdk.getString(key);
+  }
+
+  @override
+  bool getBool(String key) {
+    return _sdk.getBool(key);
+  }
+
+  @override
+  int getInt(String key) {
+    return _sdk.getInt(key);
+  }
+
+  @override
+  double getDouble(String key) {
+    return _sdk.getDouble(key);
   }
 }

@@ -10,7 +10,7 @@ class CustomAppBar extends SDUIWidget {
   double? height;
   double? topPadding;
   double? bottomPadding;
-  double? horizontalPadding = 16;
+  double? horizontalPadding = 16.0;
   bool curved = true;
   String? gradientTopColor = '#D33091';
   String? gradientBottomColor = '#FF5CBD';
@@ -23,10 +23,10 @@ class CustomAppBar extends SDUIWidget {
 
   @override
   SDUIWidget fromJson(Map<String, dynamic>? json) {
-    height = json?['height'] ?? 0;
-    topPadding = json?['topPadding'] ?? 0;
-    bottomPadding = json?['bottomPadding'] ?? 0;
-    horizontalPadding = json?['horizontalPadding'] ?? 16;
+    height = json?['height'] ?? 0.0;
+    topPadding = json?['topPadding'] ?? 0.0;
+    bottomPadding = json?['bottomPadding'] ?? 0.0;
+    horizontalPadding = json?['horizontalPadding'] ?? 16.0;
     curved = json?['curved'] ?? true;
     gradientTopColor = json?['gradientTopColor'] ?? '#D33091';
     gradientBottomColor = json?['gradientBottomColor'] ?? '#FF5CBD';
