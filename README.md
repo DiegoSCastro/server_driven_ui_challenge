@@ -12,6 +12,18 @@ Este aplicativo foi criado na versão 3.3.10 do flutter (null safety).
 Para poder roda-lo é necessário ter instalado uma versão superior a 3.0.0 do flutter e 
 superior a 2.18.5 do dart.
 
+abrir o projeto e executar o comando:
+
+flutter pub get
+
 ## Executando o app em modo de desenvolvimento
+
+Abrir o emulador junto ao editor de código ou conectar um dispositivo físico.
+executar o comando:
+
+flutter run
+
+
+
 
 
