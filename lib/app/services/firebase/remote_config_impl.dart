@@ -17,6 +17,7 @@ class RemoteConfigImpl implements RemoteConfigRepository {
   @override
   Future<void> init() async {
     _sdk = FirebaseRemoteConfig.instance;
+    await fetchAndActivate();
     await setConfigSettings();
     await setDefaults();
   }
